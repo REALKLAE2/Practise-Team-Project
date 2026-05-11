@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-﻿using System.Runtime.CompilerServices;
-=======
-﻿using System;
->>>>>>> e709e33123fd597aa63f4a8769ad37b5baee62ff
-
+using System;
 namespace Practise_Project
 {
     internal class Program
@@ -103,28 +98,23 @@ namespace Practise_Project
             //
 
             //Fletch
-            int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+            int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             foreach (int number in listOfNumbers)
             {
-                Console.WriteLine(listOfNumbers.Where(listOfNumbers % 2 == 0));
+                //Console.WriteLine(listOfNumbers.Where(listOfNumbers % 2 == 0));
             }
             Console.WriteLine("These are all the even numbers in the list");
 
 
-
-
-
-
-
-
-
-<<<<<<< HEAD
-
-
-}
-=======
         }
->>>>>>> e709e33123fd597aa63f4a8769ad37b5baee62ff
+
     }
+
+
+
+
 }
+
+    
+
