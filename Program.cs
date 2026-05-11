@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 ﻿using System.Runtime.CompilerServices;
+using System.Threading;
 =======
 ﻿using System;
 >>>>>>> e709e33123fd597aa63f4a8769ad37b5baee62ff
@@ -63,7 +64,51 @@ namespace Practise_Project
             Console.WriteLine(finalphrase);
 
             //Luke
+            Console.CursorVisible = false;
 
+            int x = 10;
+            int y = 10;
+
+            while (true)
+            {
+                // Clear previous frame
+                Console.Clear();
+
+                // Draw character
+                Console.SetCursorPosition(x, y);
+                Console.Write("@");
+
+                // Small delay for smoother movement
+                Thread.Sleep(20);
+
+                // Check for key press
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKey key = Console.ReadKey(true).Key;
+
+                    switch (key)
+                    {
+                        case ConsoleKey.LeftArrow:
+                            if (x > 0) x--;
+                            break;
+
+                        case ConsoleKey.RightArrow:
+                            if (x < Console.WindowWidth - 1) x++;
+                            break;
+
+                        case ConsoleKey.UpArrow:
+                            if (y > 0) y--;
+                            break;
+
+                        case ConsoleKey.DownArrow:
+                            if (y < Console.WindowHeight - 1) y++;
+                            break;
+
+                        case ConsoleKey.Escape:
+                            return;
+                    }
+                }
+            }
 
             //Juan
             int[] counts = new int[7];
