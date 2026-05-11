@@ -23,7 +23,7 @@ namespace Practise_Project
 
 
             //Fletch
-            int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, , 9, 10 }
+            int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
 
             foreach (int number in listOfNumbers)
             {
