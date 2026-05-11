@@ -55,6 +55,20 @@ namespace Practise_Project
 
             Console.ReadLine();
             //
+            Console.WriteLine("Hello, World!");
+            Console.ReadLine();
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(new string('*', 120));
+            Console.WriteLine(new string('*', 5));
+            Console.WriteLine("Juan Marcus Sumaya");
+            Console.WriteLine("Dunedin");
+            Console.WriteLine("My favourite BIT subject is : Programming");
+            Console.WriteLine(new string('*', 120));
+            Console.WriteLine(2.3456 + 1);
+            Console.Write("what goes \nup \nmust come \tdown \n");
+
+            //
 
             //Fletch
 
