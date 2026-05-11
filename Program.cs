@@ -1,4 +1,6 @@
-using System;
+
+﻿using System;
+
 namespace Practise_Project
 {
     internal class Program
@@ -94,17 +96,50 @@ namespace Practise_Project
             Console.WriteLine(new string('*', 120));
             Console.WriteLine(2.3456 + 1);
             Console.Write("what goes \nup \nmust come \tdown \n");
-
             //
+            var rand = new Random();
+            int[] numbers = new int[7];
+            int[] guesses = new int[7];
 
-            //Fletch
-            int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-            foreach (int number in listOfNumbers)
+            for (int i = 0; i < 7; i++)
             {
-                //Console.WriteLine(listOfNumbers.Where(listOfNumbers % 2 == 0));
+                numbers[i] = rand.Next(1, 11);
             }
-            Console.WriteLine("These are all the even numbers in the list");
+            Console.WriteLine("Memorise these numbers: " + string.Join(", ", numbers));
+            Thread.Sleep(5000);
+            Console.Clear();
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.Write($"Guess {i + 1}: ");
+                guesses[i] = Convert.ToInt32(Console.ReadLine())            
+            }
+
+
+            Console.Write("Try again: ");
+
+            int correct = 0;
+            for (int i = 0; i < 7; i++)
+            {
+                if (guesses[i] == numbers[i])
+                {
+                    Console.Write("Your Answer is correct")correct++;
+                }
+                //
+
+                //Fletch
+                int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+                foreach (int number in listOfNumbers)
+                {
+                    //Console.WriteLine(listOfNumbers.Where(listOfNumbers % 2 == 0));
+                }
+                Console.WriteLine("These are all the even numbers in the list");
+
+
+
+            }
+
 
 
         }
