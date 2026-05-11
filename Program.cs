@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿using System.Runtime.CompilerServices;
+=======
 ﻿using System;
+>>>>>>> e709e33123fd597aa63f4a8769ad37b5baee62ff
 
 namespace Practise_Project
 {
@@ -11,7 +15,35 @@ namespace Practise_Project
 
 
             //Stephanie
+            //Lab 13 Activity 4
+            int uppercase = 0;
+            int lowercase = 0;
+            int others = 0;
 
+            Console.WriteLine("Enter a line of text: ");
+            string input = Console.ReadLine();
+
+            foreach (char ch in input)
+            {
+                if (char.IsUpper(ch))
+                {
+                    uppercase++;
+                }
+                else if (char.IsLower(ch))
+                {
+                    lowercase++;
+                }
+                else
+                {
+                    others++;
+                }
+            }
+
+            Console.WriteLine("/nResults");
+            Console.WriteLine($"Uppercase letters: {uppercase}");
+            Console.WriteLine($"Lowercase letters: {lowercase}");
+            Console.WriteLine($"Other characters: {others}");
+            Console.ReadLine();
 
             //Klae
             string phrase = "the quick brown fox jumps over the lazy dog";
@@ -71,6 +103,13 @@ namespace Practise_Project
             //
 
             //Fletch
+            int[] listOfNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+
+            foreach (int number in listOfNumbers)
+            {
+                Console.WriteLine(listOfNumbers.Where(listOfNumbers % 2 == 0));
+            }
+            Console.WriteLine("These are all the even numbers in the list");
 
 
 
@@ -80,6 +119,12 @@ namespace Practise_Project
 
 
 
+<<<<<<< HEAD
+
+
+}
+=======
         }
+>>>>>>> e709e33123fd597aa63f4a8769ad37b5baee62ff
     }
 }
