@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 ﻿using System.Runtime.CompilerServices;
+using System.Threading;
 =======
 ﻿using System;
 >>>>>>> e709e33123fd597aa63f4a8769ad37b5baee62ff
@@ -99,7 +100,35 @@ namespace Practise_Project
             Console.WriteLine(new string('*', 120));
             Console.WriteLine(2.3456 + 1);
             Console.Write("what goes \nup \nmust come \tdown \n");
+            //
+            var rand = new Random();
+            int[] numbers = new int[7];
+            int[] guesses = new int[7];
 
+            for (int i = 0; i < 7; i++)
+            {
+                numbers[i] = rand.Next(1, 11);
+            }
+            Console.WriteLine("Memorise these numbers: " + string.Join(", ", numbers));
+            Thread.Sleep(5000);
+            Console.Clear();
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.Write($"Guess {i + 1}: ");
+                guesses[i] = Convert.ToInt32(Console.ReadLine())            }
+
+
+            Console.Write("Try again: ");
+        }
+
+        int correct = 0;
+                for (int i = 0; i< 7; i++)
+            {
+                if (guesses[i] == numbers[i])
+            {
+                Console.Write("Your Answer is correct")correct++;
+            }
             //
 
             //Fletch
